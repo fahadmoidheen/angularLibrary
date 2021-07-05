@@ -1,0 +1,78 @@
+<div id="masthead">  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Log In
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+                
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div><!-- /cont -->
+    <!-- /cont -->
+    
+  </div>
+  
+  
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-12" > 
+        
+        <div class="panel ">
+          <div class="panel-body ">
+            
+            
+            
+            <!--/stories-->
+            <div style="padding: 5px;">
+              <div  class="logincont">
+                <i class="bi bi-person-square"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                </svg>
+              </div>
+              <br>
+              <form (ngSubmit)="loginUser()" #logIn="ngForm">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input required name="Email" type="email" class="form-control" id="emailNav"  #loginEmail="ngModel" pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]="user.email" placeholder="Enter your email address">
+                  <b><small *ngIf="loginEmail.touched && loginEmail.invalid" class="form-text text-danger"><b>Please provide a valid email address</b></small></b>
+                </div>
+                <br>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input name="password" required type="password" class="form-control" id="passwordNav" #loginPassword="ngModel"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$" [(ngModel)]="user.password" placeholder="Enter your password">
+                  <small *ngIf="loginPassword.touched && loginPassword.invalid"   class="form-text text-danger"><b></b></small>
+                </div>
+                <br>
+                <button type="submit" [disabled]="logIn.form.invalid" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <!--/stories-->
+            
+            
+            
+          
+            
+          </div>
+        </div>
+                                                                                         
+                                                      
+                                                        
+         </div><!--/col-12-->
+    </div>
+  </div>
+                                                  
+                                                                                  
+  <hr>
